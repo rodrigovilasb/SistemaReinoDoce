@@ -4,6 +4,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using ZstdSharp.Unsafe;
 
 namespace SistemaReinoDoce
 {
@@ -12,20 +13,22 @@ namespace SistemaReinoDoce
         int opcao;
         Produto p = new Produto();
         Cliente c = new Cliente();
+        bool sair = false;
 
         public void MenuPrincipal()
         {
-            
-                Console.WriteLine("Bem-vindo ao Sistema de Gerenciamento do Reino Doce!");
+            while (!sair)
+            {
+                Console.Clear();
+                Console.WriteLine("=====Bem-vindo ao Sistema de Gerenciamento do Reino Doce!=====");
                 Console.WriteLine("MENU PRINCIPAL");
                 Console.WriteLine("1. Gerenciar Clientes");
                 Console.WriteLine("2. Gerenciar Produtos");
                 Console.WriteLine("3. Gerenciar Vendas");
-                Console.WriteLine("4. Gerenciar Fornecedores");
                 Console.WriteLine("0. Sair");
 
                 Console.Write("Selecione uma opção: ");
-            
+
                 while (!int.TryParse(Console.ReadLine(), out opcao))
                 {
                     Console.Write("Opção inválida. Digite novamente: ");
@@ -42,20 +45,17 @@ namespace SistemaReinoDoce
                     case 3:
                         // Implementar MenuVendas();
                         break;
-                    case 4:
-                        // Implementar MenuFornecedores();
-                        break;
                     case 0:
                         Console.WriteLine("Saindo do sistema. Até logo!");
                         break;
-                    default:
-                        Console.WriteLine("Opção inválida. Tente novamente.");
-                        break;
+                  
+                }
             }
         }
 
         public void MenuProdutos()
-        {
+        {   bool voltar = false;
+            while(!voltar)
             {
                 Console.WriteLine("MENU DE PRODUTOS");
                 Console.WriteLine("1. Adicionar Produto");
@@ -91,7 +91,7 @@ namespace SistemaReinoDoce
                         p.PesquisarProduto();
                         break;
                     case 6:
-                        MenuPrincipal();
+                        voltar = true;
                         break;
                     case 0:
                         break;
@@ -104,6 +104,9 @@ namespace SistemaReinoDoce
 
         public void MenuClientes()
         {
+            bool voltar = false;
+            while (!voltar)
+            {
                 Console.WriteLine("MENU DE CLIENTES");
                 Console.WriteLine("1. Adicionar Cliente");
                 Console.WriteLine("2. Listar Clientes");
@@ -129,20 +132,11 @@ namespace SistemaReinoDoce
                     case 3:
                         c.EditarCliente();
                         break;
-                    case 4:
-                        c.RemoverCliente();
-                        break;
-                    case 5:
-                        c.ConsultarCliente();
-                        break;
-                    case 6:
-                        MenuPrincipal();
-                        break;
-                    case 0:
-                        break;
+
                     default:
                         Console.WriteLine("Opção inválida. Tente novamente.");
                         break;
+                }
             }
         }
     }
