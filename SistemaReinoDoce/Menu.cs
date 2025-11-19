@@ -46,6 +46,7 @@ namespace SistemaReinoDoce
                         // Implementar MenuVendas();
                         break;
                     case 0:
+                        Environment.Exit(0);
                         Console.WriteLine("Saindo do sistema. Até logo!");
                         break;
                   
