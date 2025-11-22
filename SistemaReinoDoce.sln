@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaReinoDoce", "SistemaReinoDoce\SistemaReinoDoce.csproj", "{6B88AEB1-3BFC-448B-9362-0BBDB276A9C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrmLogin.cs", "FrmLogin.cs\FrmLogin.cs.csproj", "{661C9A88-38EE-4B3F-95CD-B7B71E561C76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6B88AEB1-3BFC-448B-9362-0BBDB276A9C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B88AEB1-3BFC-448B-9362-0BBDB276A9C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B88AEB1-3BFC-448B-9362-0BBDB276A9C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B88AEB1-3BFC-448B-9362-0BBDB276A9C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{661C9A88-38EE-4B3F-95CD-B7B71E561C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{661C9A88-38EE-4B3F-95CD-B7B71E561C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{661C9A88-38EE-4B3F-95CD-B7B71E561C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{661C9A88-38EE-4B3F-95CD-B7B71E561C76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
