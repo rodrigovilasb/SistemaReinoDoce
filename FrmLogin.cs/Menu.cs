@@ -82,15 +82,7 @@ namespace SistemaReinoDoce
                     case 2:
                         p.ListarProdutos();
                         break;
-                    case 3:
-                        p.EditarProduto();
-                        break;
-                    case 4:
-                        p.ExcluirProduto();
-                        break;
-                    case 5:
-                        p.PesquisarProduto();
-                        break;
+                    
                     case 6:
                         voltar = true;
                         break;

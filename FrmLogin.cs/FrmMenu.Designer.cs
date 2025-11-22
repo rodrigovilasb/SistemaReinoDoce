@@ -74,6 +74,7 @@
             this.btnProdutos.TabIndex = 3;
             this.btnProdutos.Text = "Gerenciar Produtos";
             this.btnProdutos.UseVisualStyleBackColor = true;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click_1);
             // 
             // btnVendas
             // 

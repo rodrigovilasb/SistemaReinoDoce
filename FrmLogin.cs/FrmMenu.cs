@@ -42,5 +42,11 @@ namespace SistemaReinoDoce
         {
             MessageBox.Show("Módulo de Vendas em desenvolvimento.");
         }
+
+        private void btnProdutos_Click_1(object sender, EventArgs e)
+        {
+            FrmProduto frmProduto = new FrmProduto();
+            frmProduto.Show();
+        }
     }
 }
