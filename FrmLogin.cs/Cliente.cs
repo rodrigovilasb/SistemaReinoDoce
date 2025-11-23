@@ -6,28 +6,23 @@ namespace SistemaReinoDoce
 {
     internal class Cliente
     {
-        private string conexaoString; // Declarado aqui
+        private string conexaoString; 
 
-        // O construtor é executado ao criar uma nova instância (new Cliente())
-        // Dentro da classe Cliente.cs, no construtor:
         public Cliente()
         {
-            // O acesso agora é direto, sem precisar passar pelo FrmLogin
+         
             conexaoString = ConexaoBD.StringConexao;
         }
 
-        // Propriedades: Refletem a estrutura da sua tabela Cliente no MySQL
+        
         public int id_cli { get; set; }
         public string nome_cli { get; set; }
         public string cpf_cnpj_cli { get; set; }
         public string telefone_cli { get; set; }
         public string email_cli { get; set; }
-        public int? id_end { get; set; } // int? permite valores nulos (nullable)
+        public int? id_end { get; set; } 
 
-        // --- MÉTODOS DE MANIPULAÇÃO DO BANCO DE DADOS (CRUD) ---
-
-        // INSERIR
-        // INSERIR
+       
         public bool InserirCliente()
         {
             using (MySqlConnection conexao = new MySqlConnection(conexaoString))
@@ -35,7 +30,6 @@ namespace SistemaReinoDoce
                 try
                 {
                     conexao.Open();
-                    // SQL atualizado para incluir cpf_cnpj_cli e id_end
                     string sql = "INSERT INTO cliente (nome_cli, cpf_cnpj_cli, telefone_cli, email_cli, id_end) VALUES (@Nome, @CPF, @Telefone, @Email, @IdEnd)";
                     using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
                     {
@@ -44,7 +38,7 @@ namespace SistemaReinoDoce
                         cmd.Parameters.AddWithValue("@Telefone", telefone_cli);
                         cmd.Parameters.AddWithValue("@Email", email_cli);
 
-                        // Garante que id_end seja enviado como DBNull se for nulo
+                       //Faz com que o id_end seja enviado como DBNull se for nulo
                         cmd.Parameters.AddWithValue("@IdEnd", id_end.HasValue ? (object)id_end.Value : DBNull.Value);
 
                         cmd.ExecuteNonQuery();
@@ -53,13 +47,11 @@ namespace SistemaReinoDoce
                 }
                 catch (Exception ex)
                 {
-                    // Agora a exceção é re-lançada para o FrmClientes, onde será exibida.
+                    //Manda de volta para o formulário capturar o erro real
                     throw;
                 }
             }
         }
-
-        // LISTAR (Retorna uma Tabela de Dados)
         public DataTable ListarClientes()
         {
             using (MySqlConnection conexao = new MySqlConnection(conexaoString))
@@ -79,8 +71,6 @@ namespace SistemaReinoDoce
             }
         }
 
-        // EDITAR
-        // EDITAR
         public bool EditarCliente()
         {
             using (MySqlConnection conexao = new MySqlConnection(conexaoString))
@@ -97,20 +87,18 @@ namespace SistemaReinoDoce
                         cmd.Parameters.AddWithValue("@Email", email_cli);
                         cmd.Parameters.AddWithValue("@IdEnd", id_end.HasValue ? (object)id_end.Value : DBNull.Value);
                         cmd.Parameters.AddWithValue("@Id", id_cli);
-
-                        // CORRIGIDO: Executa apenas uma vez e armazena o resultado
+                        // Executa e armazena o número de linhas removidas
                         int linhasAfetadas = cmd.ExecuteNonQuery();
-
-                        // Retorna true se exatamente 1 linha foi editada
+                        // Retorna true apenas se 1 linha foi removida
                         return linhasAfetadas == 1;
+                        //Desisto de fazer dar certo, já estou a mais de 12h...
                     }
                 }
-                catch (Exception) { throw; } // Mantém o throw para notificar o formulário
+                catch (Exception) { throw; } //Mesma coisa lá de cima
             }
         }
 
-        // REMOVER
-        // REMOVER
+
         public bool RemoverCliente()
         {
             using (MySqlConnection conexao = new MySqlConnection(conexaoString))
@@ -122,12 +110,11 @@ namespace SistemaReinoDoce
                     using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
                     {
                         cmd.Parameters.AddWithValue("@Id", id_cli);
-
-                        // Executa e armazena o número de linhas removidas
                         int linhasAfetadas = cmd.ExecuteNonQuery();
 
-                        // Retorna true apenas se 1 linha foi removida
+                     
                         return linhasAfetadas == 1;
+                        //Já entendi que nao quer remover :(
                     }
                 }
                 catch (Exception ex) { throw; }

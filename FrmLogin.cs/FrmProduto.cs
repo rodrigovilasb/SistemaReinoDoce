@@ -5,10 +5,9 @@ using System.Windows.Forms;
 
 namespace SistemaReinoDoce
 {
-    // A classe deve estar em SINGULAR para corresponder ao nome do arquivo!
     public partial class FrmProduto : Form
     {
-        // Instancia a classe Produto (Certifique-se que o arquivo Produto.cs está criado)
+    
         Produto produto = new Produto();
 
         public FrmProduto()
@@ -16,9 +15,7 @@ namespace SistemaReinoDoce
             InitializeComponent();
         }
 
-        // ------------------------------------------------
-        // MÉTODOS AUXILIARES
-        // ------------------------------------------------
+        
 
         private void Listar()
         {
@@ -44,9 +41,7 @@ namespace SistemaReinoDoce
             txtNome.Focus();
         }
 
-        // ------------------------------------------------
-        // EVENTOS DO FORMULÁRIO
-        // ------------------------------------------------
+      
 
         private void FrmProduto_Load(object sender, EventArgs e)
         {
@@ -68,7 +63,7 @@ namespace SistemaReinoDoce
                 produto.categoria_prod = txtCategoria.Text;
                 produto.descricao_prod = txtDescricao.Text;
 
-                // Conversão de decimal: importante usar a cultura correta (vírgula ou ponto)
+                // Conversão de decimal: Usaremos o de gente normal, que é a vírgula.
                 if (decimal.TryParse(txtPrecoVenda.Text, out decimal preco))
                 {
                     produto.preco_venda = preco;
@@ -106,7 +101,7 @@ namespace SistemaReinoDoce
                 txtPrecoVenda.Text = linha.Cells["preco_venda"].Value.ToString();
                 txtUnidade.Text = linha.Cells["unidade"].Value.ToString();
 
-                // NOTA: A Descrição (descricao_prod) não está no SELECT do Listar, então não preenchemos.
+                // A Descrição (descricao_prod) não está no SELECT do Listar, então não dá para preencher aqui.
             }
         }
 

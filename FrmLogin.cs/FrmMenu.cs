@@ -1,6 +1,7 @@
-﻿using System;
-using System.Windows.Forms;
+﻿using FrmLogin.cs;
 using MySql.Data.MySqlClient;
+using System;
+using System.Windows.Forms;
 
 namespace SistemaReinoDoce
 {
@@ -40,7 +41,8 @@ namespace SistemaReinoDoce
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Módulo de Vendas em desenvolvimento.");
+            FrmVendas frmVendas = new FrmVendas();
+            frmVendas.Show();
         }
 
         private void btnProdutos_Click_1(object sender, EventArgs e)

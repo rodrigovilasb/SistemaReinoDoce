@@ -53,6 +53,7 @@
             this.btnSair.TabIndex = 1;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnClientes
             // 
@@ -85,6 +86,7 @@
             this.btnVendas.TabIndex = 4;
             this.btnVendas.Text = "Nova Venda";
             this.btnVendas.UseVisualStyleBackColor = true;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // FrmMenu
             // 
