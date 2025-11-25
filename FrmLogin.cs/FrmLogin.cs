@@ -17,14 +17,14 @@ namespace SistemaReinoDoce
             string usuario = txtUsuario.Text.Trim(); // Remove espaços em branco
             string senha = txtSenha.Text;
 
-            // 1. Validação simples de campos vazios
+           //Validação simples de campos vazios
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
             {
                 MessageBox.Show("Por favor, preencha usuário e senha.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 2. Chama o método de Login no Banco de Dados
+            //Chama o método de Login no Banco de Dados
             if (VerificarLogin(usuario, senha))
             {
                 MessageBox.Show("Bem-vindo ao Reino Doce!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -47,7 +47,7 @@ namespace SistemaReinoDoce
             Application.Exit();
         }
 
-        // --- NOVO MÉTODO: VERIFICAÇÃO DE LOGIN NO BANCO DE DADOS ---
+       //VERIFICAÇÃO DE LOGIN NO BANCO DE DADOS ---
 
         private bool VerificarLogin(string usuario, string senha)
         {
@@ -66,7 +66,7 @@ namespace SistemaReinoDoce
 
                     using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
                     {
-                        // Parâmetros: Evita SQL Injection e garante que a senha seja checada
+                     
                         cmd.Parameters.AddWithValue("@Usuario", usuario);
                         cmd.Parameters.AddWithValue("@Senha", senha);
 
@@ -93,6 +93,11 @@ namespace SistemaReinoDoce
                     return false;
                 }
             }
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
