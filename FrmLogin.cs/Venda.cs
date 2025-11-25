@@ -76,7 +76,7 @@ namespace SistemaReinoDoce
             {
                 conexao.Open();
 
-                // Inicia uma TRANSAÇÃO (Tudo ou Nada). Se der erro nos itens, cancela o pedido e aí me complica.
+                // Inicia uma TRANSAÇÃO . Se der erro nos itens, cancela o pedido e aí me complica.
                 MySqlTransaction transacao = conexao.BeginTransaction();
 
                 try
@@ -118,9 +118,9 @@ namespace SistemaReinoDoce
                 }
                 catch (Exception ex)
                 {
-                    // Se deu erro, desfaz tudo (não se pode criar pedido pela metade, infelizmente :(
+                    // Se deu erro, desfaz tudo (não se pode criar pedido pela metade, infelizmente
                     transacao.Rollback();
-                    throw ex; // Joga o erro para o formulário mostrar
+                    throw ex; 
                 }
             }
         }
