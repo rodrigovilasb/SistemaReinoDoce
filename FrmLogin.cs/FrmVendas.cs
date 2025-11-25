@@ -33,7 +33,7 @@ namespace SistemaReinoDoce
 
                 // Foca no campo de produto para agilizar
                 txtIdProduto.Focus();
-                //Tô ficando maluco, rs
+                //Tô ficando maluc, rs
             }
             else
             {
@@ -55,7 +55,7 @@ namespace SistemaReinoDoce
                 {
                     txtNomeProduto.Text = dt.Rows[0]["nome_prod"].ToString();
                     txtPreco.Text = dt.Rows[0]["preco_venda"].ToString();
-                    txtQtd.Text = "1"; // Sugere 1 unidade
+                    txtQtd.Text = "1"; // Sugere 1 uni
                     txtQtd.Focus();
                 }
                 else
@@ -85,7 +85,6 @@ namespace SistemaReinoDoce
             // Calcula o Subtotal deste item
             decimal subtotal = preco * qtd;
 
-            // Adiciona uma linha no DataGridView (Grid)
             
             dgvItens.Rows.Add(idProd, nomeProd, qtd, preco, subtotal);
 
