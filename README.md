@@ -2,6 +2,6 @@ Sistema do E-commerce Reino Doce.
 Esse sistema contém 4 telas: Tela de Login, Tela de Vendas, Tela de Produtos e Tela de Menu.
 
 Membros:
-Antonio Iago do Nascimento Portela
-Rodrigo Almeida Vilas Boas
+Antonio Iago do Nascimento Portela,
+Rodrigo Almeida Vilas Boas e
 Anna Beatriz Silva Rosseto
