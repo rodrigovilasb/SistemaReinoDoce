@@ -130,23 +130,24 @@ CREATE TABLE usuario (
 
 INSERT INTO usuario VALUES (1, 'admin', '1234', 'Administrador');
 
-INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
-VALUES
-('Brigadeiro gourmet', 'Doce Tradicional', 'O clássico brasileiro aprimorado, com chocolate nobre e toque de cacau 70%.', 28.50, '1kg');
-
-INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
-VALUES
-('Beijinho de coco', 'Doce Tradicional', 'Feito com coco fresco ralado e leite condensado de primeira qualidade.', 10.00, '400g');
-
-INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
-VALUES
-('Bala de goma', 'Bala', 'Balas coloridas e saborosas com a textura macia que derrete na boca.', 12.00, '32g');
-
-INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
-VALUES
-('Pé de moleque', 'Doce Tradicional', 'O tradicional doce de amendoim crocante, com receita artesanal.', 13.00, '400g');
-
-INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
-VALUES
-('Trufa de chocolate', 'Trufa', 'Trufa cremosa de chocolate amargo, polvilhada com cacau em pó.', 3.15, '12.5g');
+INSERT INTO Produto VALUES
+(1,'Brigadeiro Gourmet','Doces Gourmet',
+'Doce cremoso feito com chocolate de alta qualidade, sabor intenso e textura macia. Ideal para festas, presentes ou para saborear a qualquer momento.',
+'28.50','50'),
+ 
+(2,'Beijinho de coco','Doces Tradicionais',
+'Doce tradicional feito com leite condensado e coco ralado, macio e saboroso. Perfeito para festas e para quem aprecia sabores suaves e tropicais.',
+'10.00','46'),
+ 
+(3,'Pé de moleque','Doces Típicos / Brasileiros',
+'Doce crocante feito com amendoim torrado e rapadura. Sabor típico brasileiro que remete às festas juninas e à tradição culinária do país.',
+'13.00','37'),
+ 
+(4,'Bala de goma','Balas e Guloseimas',
+'Balas macias e coloridas com sabor frutado. Uma guloseima divertida e saborosa para todas as idades, perfeita para lanches e festas.',
+'12.00','55'),
+ 
+(5,'Trufa de choco','Chocolates Finos',
+'Pequena trufa recheada e coberta com chocolate, textura cremosa e sabor marcante. Ideal para presentear ou acompanhar um café.',
+'3.25','60');
 
