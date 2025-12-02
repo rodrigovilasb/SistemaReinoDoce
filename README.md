@@ -1,5 +1,5 @@
 
-**Sistema de e-commerce - Reino Doce**
+## **Sistema de e-commerce - Reino Doce**
 
 Sistema desenvolvido como parte do Projeto Integrado pelos alunos do curso **3º MTEC-PI (Ensino Médio com Técnico em Administração – Período Integral)** com o **2ºDS-A (Técnico em Desenvolvimento de Sistemas)**.
 O projeto simula um ambiente administrativo inspirado em um sistema **ERP (Planejamento de Recursos Empresariais)**, focado na organização de vendas e produtos.
