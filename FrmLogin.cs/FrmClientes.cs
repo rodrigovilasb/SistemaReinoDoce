@@ -6,7 +6,7 @@ namespace SistemaReinoDoce
 {
     public partial class FrmClientes : Form
     {
-        // Instancia a classe Cliente que criamos e ajustamos
+        // Instancia a classe Cliente
         Cliente cliente = new Cliente();
 
         public FrmClientes()
@@ -38,15 +38,10 @@ namespace SistemaReinoDoce
             txtNome.Focus();
         }
 
-        // **********************************************
-        // Eventos Gerados ao Clicar nos Elementos Visuais
-        // **********************************************
-
+    
+        // A partir de agora, serão os eventos gerados ao clicar na tela
+      
         // 1. Ao abrir a tela, carrega a lista
-
-        // Método para limpar todas as caixas de texto
-
-
         private void FrmClientes_Load(object sender, EventArgs e)
         {
             dgvClientes.ReadOnly = true;
@@ -62,7 +57,7 @@ namespace SistemaReinoDoce
                 return;
             }
 
-            // A variável 'cliente' agora existe e está inicializada
+            // A variável 'cliente' agora existe :)
             cliente.nome_cli = txtNome.Text;
             cliente.cpf_cnpj_cli = txtCpfCnpj.Text;
             cliente.email_cli = txtEmail.Text;
@@ -71,8 +66,8 @@ namespace SistemaReinoDoce
             if (cliente.InserirCliente()) // Assume que InserirCliente() está no Cliente.cs
             {
                 MessageBox.Show("Cliente cadastrado com sucesso!");
-                Listar();        // Agora existe
-                LimparCampos();  // Agora existe
+                Listar();       
+                LimparCampos();  
             }
             else
             {
@@ -147,7 +142,7 @@ namespace SistemaReinoDoce
                 DataGridViewRow linha = dgvClientes.Rows[e.RowIndex];
 
                 // 2. Transfere os dados da linha para os TextBox do formulário
-                // O nome das colunas abaixo (ex: "id_cli") deve ser o mesmo nome que você usou no seu comando SELECT (método ListarClientes).
+                
 
                 txtId.Text = linha.Cells["id_cli"].Value.ToString();
                 txtNome.Text = linha.Cells["nome_cli"].Value.ToString();
@@ -155,12 +150,18 @@ namespace SistemaReinoDoce
                 txtTelefone.Text = linha.Cells["telefone_cli"].Value.ToString();
                 txtEmail.Text = linha.Cells["email_cli"].Value.ToString();
 
-                // Se id_end for nullable e você não estiver a usar ele agora, pode pular ou fazer:
-                // if (linha.Cells["id_end"].Value != DBNull.Value)
-                // {
-                //     // ... preencher o campo de id_end
-                // }
+  
             }
+        }
+
+        private void lblId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

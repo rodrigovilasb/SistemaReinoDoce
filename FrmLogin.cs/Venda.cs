@@ -118,7 +118,7 @@ namespace SistemaReinoDoce
                 }
                 catch (Exception ex)
                 {
-                    // Se deu erro, desfaz tudo (não se pode criar pedido pela metade, infelizmente
+                    // Se deu erro, desfaz tudo (não se pode criar pedido pela metade, infelizmente)
                     transacao.Rollback();
                     throw ex; 
                 }

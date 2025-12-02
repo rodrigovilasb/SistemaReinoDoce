@@ -63,7 +63,7 @@ namespace SistemaReinoDoce
                 produto.categoria_prod = txtCategoria.Text;
                 produto.descricao_prod = txtDescricao.Text;
 
-                // Conversão de decimal: Usaremos o de gente normal, que é a vírgula.
+                // Conversão de decimal: Usaremos o de gente 'normal', que é a vírgula. (Todo respeito aos EUA)
                 if (decimal.TryParse(txtPrecoVenda.Text, out decimal preco))
                 {
                     produto.preco_venda = preco;
@@ -106,6 +106,16 @@ namespace SistemaReinoDoce
         }
 
         private void lblId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmProduto_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
         {
 
         }

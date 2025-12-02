@@ -45,14 +45,14 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.dgvItens = new System.Windows.Forms.DataGridView();
-            this.lblTotalFinal = new System.Windows.Forms.Label();
-            this.btnFinalizar = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.idProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTotalFinal = new System.Windows.Forms.Label();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItens)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +65,7 @@
             this.label1.Size = new System.Drawing.Size(149, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Área do Cliente";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -215,39 +216,6 @@
             this.dgvItens.Size = new System.Drawing.Size(796, 150);
             this.dgvItens.TabIndex = 16;
             // 
-            // lblTotalFinal
-            // 
-            this.lblTotalFinal.AutoSize = true;
-            this.lblTotalFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lblTotalFinal.Location = new System.Drawing.Point(447, 405);
-            this.lblTotalFinal.Name = "lblTotalFinal";
-            this.lblTotalFinal.Size = new System.Drawing.Size(78, 36);
-            this.lblTotalFinal.TabIndex = 17;
-            this.lblTotalFinal.Text = "0,00";
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFinalizar.Location = new System.Drawing.Point(588, 399);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(155, 42);
-            this.btnFinalizar.TabIndex = 18;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(290, 414);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(125, 25);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Valor Total:";
-            // 
             // idProd
             // 
             this.idProd.HeaderText = "Cod.";
@@ -287,6 +255,39 @@
             this.subtotal.Name = "subtotal";
             this.subtotal.ReadOnly = true;
             this.subtotal.Width = 175;
+            // 
+            // lblTotalFinal
+            // 
+            this.lblTotalFinal.AutoSize = true;
+            this.lblTotalFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalFinal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblTotalFinal.Location = new System.Drawing.Point(447, 405);
+            this.lblTotalFinal.Name = "lblTotalFinal";
+            this.lblTotalFinal.Size = new System.Drawing.Size(78, 36);
+            this.lblTotalFinal.TabIndex = 17;
+            this.lblTotalFinal.Text = "0,00";
+            // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnFinalizar.Location = new System.Drawing.Point(588, 399);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(155, 42);
+            this.btnFinalizar.TabIndex = 18;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(290, 414);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(125, 25);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Valor Total:";
             // 
             // FrmVendas
             // 

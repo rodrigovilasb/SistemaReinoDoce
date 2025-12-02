@@ -147,6 +147,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(179, 22);
             this.txtId.TabIndex = 16;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // lblId
             // 
@@ -217,6 +218,7 @@
             this.Controls.Add(this.lblId);
             this.Name = "FrmProduto";
             this.Text = "FrmProduto";
+            this.Load += new System.EventHandler(this.FrmProduto_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

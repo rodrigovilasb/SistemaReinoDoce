@@ -1,6 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Data; // Necessário para o DataTable
+using System.Data;
 using System.Windows.Forms;
 
 namespace SistemaReinoDoce
@@ -17,7 +17,7 @@ namespace SistemaReinoDoce
             string usuario = txtUsuario.Text.Trim(); // Remove espaços em branco
             string senha = txtSenha.Text;
 
-           //Validação simples de campos vazios
+           //Validação básica para não ter nenhum campo vazio
             if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(senha))
             {
                 MessageBox.Show("Por favor, preencha usuário e senha.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -30,7 +30,7 @@ namespace SistemaReinoDoce
                 MessageBox.Show("Bem-vindo ao Reino Doce!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // NAVEGAÇÃO CORRETA APÓS O LOGIN
-                this.Hide();
+                this.Hide(); // o hide esconde o formulário de login, porque como o jefão disse, se fechar ele, fecha o programa todo
                 FrmMenu formMenu = new FrmMenu();
                 formMenu.Show();
             }
@@ -72,7 +72,7 @@ namespace SistemaReinoDoce
 
                         using (MySqlDataAdapter da = new MySqlDataAdapter(cmd))
                         {
-                            da.Fill(dt);
+                            da.Fill(dt); // Preenche o DataTable com o resultado da consulta
                         }
                     }
 
@@ -96,6 +96,11 @@ namespace SistemaReinoDoce
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblUsuario_Click(object sender, EventArgs e)
         {
 
         }

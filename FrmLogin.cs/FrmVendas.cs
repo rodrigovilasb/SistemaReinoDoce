@@ -103,7 +103,7 @@ namespace SistemaReinoDoce
         private void AtualizarTotal(decimal valor)
         {
             totalGeral += valor;
-            lblTotalFinal.Text = totalGeral.ToString("C2"); // Formata como a Moeda + top (R$)
+            lblTotalFinal.Text = totalGeral.ToString("C2"); // Formata como a Moeda + top do mundo, que é o (R$)
         }
 
         
@@ -117,7 +117,7 @@ namespace SistemaReinoDoce
 
             try
             {
-                // Cria a lista de itens para enviar para a classe Venda
+                // Cria a lista de itens para enviar para a classe Venda - Aprendi no videozinho do YT, esse list é complexo hein
                 List<Venda.ItemPedido> listaItens = new List<Venda.ItemPedido>();
 
                 // 'Varre' o Grid linha por linha
@@ -125,7 +125,7 @@ namespace SistemaReinoDoce
                 {
                     Venda.ItemPedido item = new Venda.ItemPedido();
                     item.IdProd = Convert.ToInt32(linha.Cells[0].Value); // Coluna 0: ID
-                    // Pula nome (1)
+                    // Pula o nome (1)
                     item.Quantidade = Convert.ToInt32(linha.Cells[2].Value); // Coluna 2: Qtd
                     item.PrecoUnit = Convert.ToDecimal(linha.Cells[3].Value); // Coluna 3: Preço
                     item.Subtotal = Convert.ToDecimal(linha.Cells[4].Value); // Coluna 4: Subtotal
@@ -152,6 +152,11 @@ namespace SistemaReinoDoce
             {
                 MessageBox.Show("Erro ao fechar venda: " + ex.Message);
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
