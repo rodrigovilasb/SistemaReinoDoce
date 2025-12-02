@@ -129,3 +129,24 @@ CREATE TABLE usuario (
 
 
 INSERT INTO usuario VALUES (1, 'admin', '1234', 'Administrador');
+
+INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
+VALUES
+('Brigadeiro gourmet', 'Doce Tradicional', 'O clássico brasileiro aprimorado, com chocolate nobre e toque de cacau 70%.', 28.50, '1kg');
+
+INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
+VALUES
+('Beijinho de coco', 'Doce Tradicional', 'Feito com coco fresco ralado e leite condensado de primeira qualidade.', 10.00, '400g');
+
+INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
+VALUES
+('Bala de goma', 'Bala', 'Balas coloridas e saborosas com a textura macia que derrete na boca.', 12.00, '32g');
+
+INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
+VALUES
+('Pé de moleque', 'Doce Tradicional', 'O tradicional doce de amendoim crocante, com receita artesanal.', 13.00, '400g');
+
+INSERT INTO Produto (nome_prod, categoria_prod, descricao_prod, preco_venda, unidade)
+VALUES
+('Trufa de chocolate', 'Trufa', 'Trufa cremosa de chocolate amargo, polvilhada com cacau em pó.', 3.15, '12.5g');
+
