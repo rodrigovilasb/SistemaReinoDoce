@@ -1,12 +1,35 @@
-Sistema do E-commerce Reino Doce. 
 
-Essse Sistema é referente ao Projeto Integrado com os Alunos do MTEC-PI (Ensino médio com Técnico em Administração e Periodo Integral).
+**Sistema de e-commerce - Reino Doce**
 
-O sistema foi baseado no sistema de software ERP (Planejamento de Recursos Empresariais).  
+Sistema desenvolvido como parte do Projeto Integrado pelos alunos do curso **3º MTEC-PI (Ensino Médio com Técnico em Administração – Período Integral)** com o **2ºDS-A (Técnico em Desenvolvimento de Sistemas)**.
+O projeto simula um ambiente administrativo inspirado em um sistema **ERP (Planejamento de Recursos Empresariais)**, focado na organização de vendas e produtos.
 
-Esse sistema contém 4 telas: Tela de Login, Tela de Vendas, Tela de Produtos e Tela de Menu.
+## Sobre o Sistema
 
-Membros:
-Antonio Iago do Nascimento Portela,
-Rodrigo Almeida Vilas Boas e
-Anna Beatriz Silva Rosseto
+O sistema representa o funcionamento básico de um e-commerce fictício chamado **Reino Doce**, permitindo ao usuário acessar áreas principais de controle e gerenciamento.
+
+Ele é composto por cinco telas:
+
+* **Tela de Login** – Autenticação de acesso ao sistema.
+* **Tela de Menu** – Central de navegação entre as funcionalidades.
+* **Tela de Clientes** – Cadastro, edição e consulta de informações dos clientes do sistema.
+* **Tela de Produtos** – Cadastro, visualização e gerenciamento dos produtos disponíveis.
+* **Tela de Vendas** – Registro e controle das vendas realizadas.
+
+
+## Base do Projeto
+
+O desenvolvimento foi inspirado na estrutura de sistemas ERP, priorizando:
+
+* Organização e controle de dados
+* Navegação simples
+* Fluxo operacional direto
+* Interface adequada ao contexto administrativo
+
+## Equipe
+
+* **Antonio Iago do Nascimento Portela**
+* **Anna Beatriz Silva Rosseto**
+* **Rodrigo Almeida Vilas Boas**
+
+
