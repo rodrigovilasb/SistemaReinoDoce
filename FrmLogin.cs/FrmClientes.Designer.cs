@@ -123,6 +123,7 @@
             this.lblTelefone.Size = new System.Drawing.Size(64, 16);
             this.lblTelefone.TabIndex = 7;
             this.lblTelefone.Text = "Telefone:";
+            this.lblTelefone.Click += new System.EventHandler(this.lblTelefone_Click);
             // 
             // btnSalvar
             // 

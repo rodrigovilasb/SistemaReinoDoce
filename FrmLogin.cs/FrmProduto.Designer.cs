@@ -98,6 +98,7 @@
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(179, 22);
             this.txtDescricao.TabIndex = 22;
+            this.txtDescricao.TextChanged += new System.EventHandler(this.txtDescricao_TextChanged);
             // 
             // lblDescricao
             // 

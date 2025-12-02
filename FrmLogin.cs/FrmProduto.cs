@@ -119,5 +119,10 @@ namespace SistemaReinoDoce
         {
 
         }
+
+        private void txtDescricao_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

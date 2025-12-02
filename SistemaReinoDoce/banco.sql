@@ -126,3 +126,6 @@ CREATE TABLE usuario (
     nivel VARCHAR(20) DEFAULT 'Vendedor',
     PRIMARY KEY (id_usuario)
 );
+
+
+INSERT INTO usuario VALUES (1, 'admin', '1234', 'Administrador');
