@@ -24,8 +24,8 @@ O desenvolvimento foi inspirado na estrutura de sistemas ERP, priorizando:
 * Organização e controle de dados
 * Navegação simples
 * Fluxo operacional direto
-* Interface adequada ao contexto administrativo
 
+  
 ## Equipe
 
 * **Antonio Iago do Nascimento Portela**
