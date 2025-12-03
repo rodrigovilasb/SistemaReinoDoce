@@ -110,11 +110,6 @@ namespace SistemaReinoDoce
 
         }
 
-        private void FrmProduto_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void txtId_TextChanged(object sender, EventArgs e)
         {
 

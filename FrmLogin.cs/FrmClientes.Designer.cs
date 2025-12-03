@@ -38,9 +38,6 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.txtCpfCnpj = new System.Windows.Forms.TextBox();
             this.lblCpfCnpj = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -127,40 +124,13 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(37, 210);
+            this.btnSalvar.Location = new System.Drawing.Point(180, 222);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(135, 210);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 10;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(230, 210);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 11;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(323, 210);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 12;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
             // 
             // txtCpfCnpj
             // 
@@ -185,9 +155,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtCpfCnpj);
             this.Controls.Add(this.lblCpfCnpj);
-            this.Controls.Add(this.btnLimpar);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lblTelefone);
@@ -219,9 +186,6 @@
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.TextBox txtCpfCnpj;
         private System.Windows.Forms.Label lblCpfCnpj;
     }

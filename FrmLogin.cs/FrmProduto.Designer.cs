@@ -30,8 +30,6 @@
         {
             this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             this.lblPrecoVenda = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -43,7 +41,6 @@
             this.lblId = new System.Windows.Forms.Label();
             this.txtUnidade = new System.Windows.Forms.TextBox();
             this.lblUnidade = new System.Windows.Forms.Label();
-            this.btnLimpar = new System.Windows.Forms.Button();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
@@ -64,27 +61,9 @@
             this.lblPrecoVenda.TabIndex = 27;
             this.lblPrecoVenda.Text = "Preço: ";
             // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(253, 287);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 25;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(158, 287);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 24;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(60, 287);
+            this.btnSalvar.Location = new System.Drawing.Point(174, 287);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 23;
@@ -176,15 +155,6 @@
             this.lblUnidade.TabIndex = 29;
             this.lblUnidade.Text = "Unidade:";
             // 
-            // btnLimpar
-            // 
-            this.btnLimpar.Location = new System.Drawing.Point(347, 287);
-            this.btnLimpar.Name = "btnLimpar";
-            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 31;
-            this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
-            // 
             // dgvProdutos
             // 
             this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -201,13 +171,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dgvProdutos);
-            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.txtUnidade);
             this.Controls.Add(this.lblUnidade);
             this.Controls.Add(this.txtPrecoVenda);
             this.Controls.Add(this.lblPrecoVenda);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblDescricao);
@@ -219,7 +186,7 @@
             this.Controls.Add(this.lblId);
             this.Name = "FrmProduto";
             this.Text = "FrmProduto";
-            this.Load += new System.EventHandler(this.FrmProduto_Load_1);
+            this.Load += new System.EventHandler(this.FrmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,8 +197,6 @@
 
         private System.Windows.Forms.TextBox txtPrecoVenda;
         private System.Windows.Forms.Label lblPrecoVenda;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblDescricao;
@@ -243,7 +208,6 @@
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.TextBox txtUnidade;
         private System.Windows.Forms.Label lblUnidade;
-        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.DataGridView dgvProdutos;
     }
 }
